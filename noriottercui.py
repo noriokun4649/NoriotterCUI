@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 import twitter  # pip install python-twitter
 import threading
 import sys
@@ -17,6 +18,8 @@ def input_get():
         else:
             api.PostUpdate(status=stings)
             print("Tweetしたぞ:" + stings)
+
+
 th = threading.Thread(target=input_get)
 th.start()
 followeid = api.GetFriendIDs(cursor=-1)
